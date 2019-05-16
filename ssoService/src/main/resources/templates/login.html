@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="#" th:action="@{/sso/login}" th:object="${user}">
+		账号：<input type="text"  th:field="*{name}" />
+		密码：<input type="password"  th:field="*{password}"  />
+			<input type="hidden"  name="callbackURL" th:value="${callbackURL}"/>
+			 <input type="submit"/>
+	</form>
+</body>
+</html>
